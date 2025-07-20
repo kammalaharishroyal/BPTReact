@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#UIDashboard>div{
+    height: 80px;
+    /* border: 1px solid orange; */
+     padding:20px;
+     background-color: cadetblue;
+     color: white;
+}
+#UIDashboard>div ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: dashed;
+   
+    font-size: larger;
+}
+.link{
+    text-decoration: none;
+    color: inherit; /* Optional: Keep text color consistent */
+   
+
+}

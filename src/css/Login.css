@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+div{
+ height: 100vh;
+ position: relative;
+}
+#loginform{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    padding: 30px;
+   width: 50%;
+   /* margin-top: 100px; */
+    /* background-color: orange; */
+   box-shadow: 1px 0px 2px rgb(95, 92, 92);
+   border-radius: 30px;
+   height: 300px;
+   
+}
+#loginform>h2{
+    width: 100%;
+    text-align: center;
+    
+    margin-bottom: 30px;
+    padding: 10px 0px;
+}
+#loginform>input,#loginform>button{
+padding: 10px 10px;
+text-align: center;
+margin: 0px 20px 0px 0px;
+border: none;
+border-radius: 30px;
+box-shadow: 1px 1px 10px lightgray;
+}
+#loginform>button{
+    width: 100px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+#loginform>a{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}

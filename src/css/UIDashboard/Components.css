@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ #Components table{
+    border:  1px salmon solid;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+ #Components table thead{
+    background-color: rgb(8, 76, 203);
+    color: white;
+
+ }
+  #Components table thead th{
+    padding: 10px;
+  }
+  #Components table tbody tr td{
+    padding: 8px;
+    border: 1px solid;
+  }

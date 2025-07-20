@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ #GetSubComponent table{
+    border:  1px salmon solid;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+ #GetSubComponent table thead{
+    background-color: forestgreen;
+    color: white;
+
+ }
+  #GetSubComponent table thead th{
+    padding: 10px;
+  }
+  #GetSubComponent table tbody tr td{
+    padding: 8px;
+    border: 1px solid;
+  }

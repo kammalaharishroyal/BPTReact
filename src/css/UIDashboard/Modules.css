@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ #modules table{
+    border:  1px salmon solid;
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+}
+ #modules table thead{
+    background-color: orange;
+
+ }
+  #modules table thead th{
+    padding: 10px;
+  }
+  #modules table tbody tr td{
+    padding: 8px;
+    border: 1px solid;
+  }

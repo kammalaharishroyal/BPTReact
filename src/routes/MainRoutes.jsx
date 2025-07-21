@@ -17,6 +17,9 @@ import ObjRepo from '../pages/UITesting/Application/JIVA/ObjRepo';
 import Modules from '../pages/UITesting/Application/JIVA/Modules';
 import Components from '../pages/UITesting/Application/JIVA/Components';
 import GetSubComponent from '../pages/UITesting/Application/JIVA/GetSubComponent';
+import JavaDashboard from '../pages/UITesting/Application/JIVA/JavaComonents/JavaDashboard/JavaDashboard'
+
+
 const MainRoutes = () => (
   <Routes>
     <Route path="/" index element={<Login />} />
@@ -25,6 +28,7 @@ const MainRoutes = () => (
     <Route path="/ui" element={<UIDashboard />} >
     <Route index element={<DefaultDash />} />
     <Route path="TestNgTests" element={<TestNgTests />} />
+    <Route path="JavaComponents" element={<JavaDashboard />} />
     <Route path="ObjRepo" element={<ObjRepo />} >
     <Route path="Modules" element={<Modules />} />
     <Route path="Components" element={<Components />} />

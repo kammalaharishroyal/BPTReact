@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#JavaDashboard>div{
+    height: 80px;
+    /* border: 1px solid orange; */
+     padding:20px;
+
+}
+#JavaDashboard>div ul{
+    display: flex;
+    justify-content:space-evenly;   
+    list-style: none;
+    text-decoration: dashed;
+   
+    font-size: larger;
+}
+#JavaDashboard>div .link{
+    text-decoration: none;
+    color: inherit; /* Optional: Keep text color consistent */
+     box-shadow: 1px 1px 10px lightblue;
+
+}

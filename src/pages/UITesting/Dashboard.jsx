@@ -14,7 +14,7 @@ function UIDashboard() {
             <li><Link to={"JavaComponents"}  className='link'>JavaComponents</Link></li>
             <li><Link to={"Create"}  className='link'>Create</Link></li>
             <li><Link to={"ObjRepo"}  className='link'>ObjRepo</Link></li>
-            <li><Link to={"ObjRepo"}  className='link'><i class="fa-solid fa-cart-shopping"></i></Link></li>
+            <li><Link to={"cart"}  className='link'><i class="fa-solid fa-cart-shopping"></i></Link></li>
         
         </ul>
       </div>

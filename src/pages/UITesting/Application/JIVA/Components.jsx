@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../../../css/UIDashboard/Components.css";
-function Components() {
-     const [cart, setCart] = useState([]);
+function Components({ onAddToCart }) {
+    
       const [searchTerm, setSearchTerm] = useState("");
   const rows = [
     { id: 1, module: "LgnPage", component: "EnterLgnDetails",image:"AddActivityImg",subComponent:"5" },
@@ -9,9 +9,7 @@ function Components() {
     { id: 3, module: "EcvPage", component: "SelectEcvsb",image:"AddActivityImg",subComponent:"5" },
     { id: 4, module: "McvPage", component: "morelinks",image:"AddActivityImg",subComponent:"5" }
   ];
-   const handleAddToCart = (row) => {
-    setCart((prev) => [...prev, row]);
-  };
+   
  const filteredRows = rows.filter((row) =>
   row.module.toLowerCase().includes(searchTerm.toLowerCase())||(row.id).toString().includes(searchTerm.toLowerCase())
 );
@@ -53,7 +51,7 @@ function Components() {
                 <td>{row.module}</td>
                 <td>{row.component}</td>
                 <td>{row.image}</td>
-                <td><i class="fa-solid fa-plus" onClick={()=>handleAddToCart(row.component)}></i><i class="fa-solid fa-circle-check fa-xs" name={row.component}></i></td>
+                <td><i class="fa-solid fa-plus" onClick={()=>onAddToCart(row)}></i><i class="fa-solid fa-circle-check fa-xs" name={row.component}></i></td>
                 <td>{row.subComponent}</td>
               </tr>
             ))
@@ -66,13 +64,7 @@ function Components() {
           )}
           </tbody>
         </table>
-        <section id="selected">
-            {cart.map((item, index) => (
-            <li key={index}>
-              {item}
-            </li>
-          ))}
-        </section>
+        
       </div>
     </>
   );

@@ -18,29 +18,43 @@ import Modules from '../pages/UITesting/Application/JIVA/Modules';
 import Components from '../pages/UITesting/Application/JIVA/Components';
 import GetSubComponent from '../pages/UITesting/Application/JIVA/GetSubComponent';
 import JavaDashboard from '../pages/UITesting/Application/JIVA/JavaComonents/JavaDashboard/JavaDashboard'
+import Cart from '../pages/UITesting/Application/Components/Cart';
+import { useState } from 'react';
 
+function MainRoutes() {
+  const [cartItems, setCartItems] = useState([]);
+  const handleAddToCart = (item) => {
+    console.log("added item:"+item);
+    
+    if (!cartItems.some((i) => i.id === item.id)) {
+     
+      setCartItems([...cartItems, item]);
+    }
+  };
+  console.log("total added:"+cartItems);
+  
+  return (
+    <Routes>
+      <Route path="/" index element={<Login />} />
+      {/* <Route path="/forbidden" element={<Forbidden />} /> */}
 
-const MainRoutes = () => (
-  <Routes>
-    <Route path="/" index element={<Login />} />
-    {/* <Route path="/forbidden" element={<Forbidden />} /> */}
-    
-    <Route path="/ui" element={<UIDashboard />} >
-    <Route index element={<DefaultDash />} />
-    <Route path="TestNgTests" element={<TestNgTests />} />
-    <Route path="JavaComponents" element={<JavaDashboard />} />
-    <Route path="ObjRepo" element={<ObjRepo />} >
-    <Route path="Modules" element={<Modules />} />
-    <Route path="Components" element={<Components />} />
-    <Route path="getAllSubcomponents" element={<GetSubComponent />} />
-    
-    <Route path="*" element={<NotFound />} />
-    </Route>
-    <Route path="*" element={<NotFound />} />
-    </Route>
+      <Route path="/ui" element={<UIDashboard />}>
+        <Route index element={<DefaultDash />} />
+        <Route path="TestNgTests" element={<TestNgTests />} />
+        <Route path="JavaComponents" element={<JavaDashboard />} />
+        <Route path="Cart" element={<Cart  cartItems={cartItems}/>} />
+        <Route path="ObjRepo" element={<ObjRepo />}>
+          <Route path="Modules" element={<Modules />} />
+          <Route path="Components" element={<Components onAddToCart={handleAddToCart} />} />
+          <Route path="getAllSubcomponents" element={<GetSubComponent />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Route>
 
       <Route path="*" element={<NotFound />} />
-  </Routes>
-);
+    </Routes>
+  );
+}
 
 export default MainRoutes;

@@ -37,15 +37,19 @@ const handleLogin = async () => {
 
   return (
     <div>
-      <section id='loginform'>
-        <h2>Login</h2>
-      <input placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
     
-      <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
- 
-      <button onClick={handleLogin}>Login</button>
+<div className="login-page">
+  <div className="branding">ZEOMEGA</div>
+  <div className="animated-bg-circle"></div>
+  <div className="login-card">
+    <h2>Welcome Back</h2>
+    <input type="text" value={username} placeholder="Username" onChange={e => setUsername(e.target.value)}/>
+    <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
+     <button onClick={handleLogin}>Login</button>
       <a href="">forgot password?</a>
-      </section>
+  </div>
+</div>
+
     </div>
   );
 };

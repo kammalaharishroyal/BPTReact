@@ -3,11 +3,17 @@
     padding: 0px;
     box-sizing: border-box;
 }
+ #Components {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
  #Components table{
     border:  1px salmon solid;
-    width: 70%;
-    margin-left: 15%;
+    width: 90%;
+    /* margin-left: 15%; */
     text-align: center;
+    align-items: center;
 }
  #Components table thead{
     background-color: rgb(8, 76, 203);
@@ -26,6 +32,8 @@
   }
 #Components>section{
   padding: 0px 30%;
+  display: flex;
+  margin-top: 30px;
 
 }
 #Components>section>button{

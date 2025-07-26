@@ -1,8 +1,15 @@
 import { useState } from "react";
 import "../../../../css/UIDashboard/Components.css";
 function Components({ onAddToCart }) {
+    const [addedRows, setAddedRows] = useState({});
+
+  const handleClick = (rowId, rowData) => {
+    onAddToCart(rowData);
+    setAddedRows(prev => ({ ...prev, [rowId]: true }));
+  };
     
       const [searchTerm, setSearchTerm] = useState("");
+      
   const rows = [
     { id: 1, module: "LgnPage", component: "EnterLgnDetails",image:"AddActivityImg",subComponent:"5" },
     { id: 2, module: "ActPage", component: "AddActivity",image:"AddActivityImg",subComponent:"5" },
@@ -51,7 +58,8 @@ function Components({ onAddToCart }) {
                 <td>{row.module}</td>
                 <td>{row.component}</td>
                 <td>{row.image}</td>
-                <td><i class="fa-solid fa-plus" onClick={()=>onAddToCart(row)}></i><i class="fa-solid fa-circle-check fa-xs" name={row.component}></i></td>
+                <td><i className={`fa-solid ${addedRows[row.id] ? "fa-check" : "fa-plus"}`}
+                onClick={() => handleClick(row.id, row)}></i></td>
                 <td>{row.subComponent}</td>
               </tr>
             ))

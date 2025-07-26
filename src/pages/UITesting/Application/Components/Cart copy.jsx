@@ -1,9 +1,8 @@
-import { Link, Outlet, useNavigate } from 'react-router-dom';
 function Cart({cartItems}) {
    
     return (
     <div>
-     <Link to={"NewCart"}>New Cart</Link>
+     
       {cartItems.length === 0 ? (
         <p>No items added yet.</p>
       ) : (

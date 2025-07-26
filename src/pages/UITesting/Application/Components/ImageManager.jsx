@@ -6,13 +6,13 @@ const ImageManager = ({ objects }) => {
   const [selectedImages, setSelectedImages] = useState([]);
 
   const handleAddImage = (obj) => {
-    if (!selectedImages.find((item) => item.objName === obj.objName)) {
+    if (!selectedImages.find((item) => item.component === obj.component)) {
       setSelectedImages([...selectedImages, obj]);
     }
   };
 
   const handleExport = () => {
-    const names = selectedImages.map((item) => item.objName);
+    const names = selectedImages.map((item) => item.component);
     console.log('Exported Names:', names);
     alert(`Exported Order: ${names.join(', ')}`);
   };
@@ -26,16 +26,16 @@ const ImageManager = ({ objects }) => {
     setSelectedImages(reordered);
   };
 const handleRemoveImage = (objName) => {
-    setSelectedImages((prev) => prev.filter((item) => item.objName !== objName));
+    setSelectedImages((prev) => prev.filter((item) => item.component !== objName));
   };
   return (
     <div className="image-manager">
       {/* Sidebar */}
       <div className="sidebar">
-        <h3>Objects</h3>
+        <h3>Cart</h3>
         {objects.map((obj, index) => (
           <div key={index} className="object-button">
-            <button onClick={() => handleAddImage(obj)}>{obj.objName}</button>
+            <button onClick={() => handleAddImage(obj)}>{obj.component}</button>
           </div>
         ))}
       </div>
@@ -44,7 +44,7 @@ const handleRemoveImage = (objName) => {
       <div className="image-panel">
         <h3>Selected Images</h3>
         <button className="export-button" onClick={handleExport}>
-          Export Order
+          Export To Java
         </button>
         
         <DragDropContext onDragEnd={onDragEnd}>
@@ -56,16 +56,16 @@ const handleRemoveImage = (objName) => {
                 {...provided.droppableProps}
               >
                 {selectedImages.map((item, index) => (
-                  <Draggable key={item.objName} draggableId={item.objName} index={index}>
+                  <Draggable key={item.component} draggableId={item.component} index={index}>
                     {(provided, snapshot) => (
                       <div
                         className={`image-item ${snapshot.isDragging ? 'dragging' : ''}`}
                         ref={provided.innerRef}
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
-                      ><button className="remove-btn" onClick={() => handleRemoveImage(item.objName)} ><i class="fa-solid fa-xmark"></i></button>
-                        <p>{item.objName}</p>
-                        <img src={item.imagePath} alt={item.objName} />
+                      ><button className="remove-btn" onClick={() => handleRemoveImage(item.component)} ><i class="fa-solid fa-xmark"></i></button>
+                        <p>{item.component}</p>
+                        <img src={item.image} alt={item.component} />
                       </div>
                     )}
                   </Draggable>

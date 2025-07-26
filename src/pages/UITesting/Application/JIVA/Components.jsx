@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../../../css/UIDashboard/Components.css";
+import img from '../../../../images/Image1.png';
 function Components({ onAddToCart }) {
     const [addedRows, setAddedRows] = useState({});
 
@@ -11,10 +12,21 @@ function Components({ onAddToCart }) {
       const [searchTerm, setSearchTerm] = useState("");
       
   const rows = [
-    { id: 1, module: "LgnPage", component: "EnterLgnDetails",image:"AddActivityImg",subComponent:"5" },
-    { id: 2, module: "ActPage", component: "AddActivity",image:"AddActivityImg",subComponent:"5" },
-    { id: 3, module: "EcvPage", component: "SelectEcvsb",image:"AddActivityImg",subComponent:"5" },
-    { id: 4, module: "McvPage", component: "morelinks",image:"AddActivityImg",subComponent:"5" }
+    { id: 1, module: "LgnPage", component: "EnterLgnDetails",image:img,subComponent:"5" },
+    { id: 2, module: "ActPage", component: "AddActivity",image:img,subComponent:"5" },
+    { id: 3, module: "EcvPage", component: "SelectEcvsb",image:img,subComponent:"5" },
+    { id: 4, module: "McvPage", component: "morelinks",image:img,subComponent:"5" },
+    { id: 5, module: "EcvPage", component: "SelectEcvsb5",image:img,subComponent:"5" },
+    { id: 6, module: "EcvPage", component: "SelectEcvsb6",image:img,subComponent:"5" },
+    { id: 7, module: "EcvPage", component: "SelectEcvsb7",image:img,subComponent:"5" },
+    { id: 8, module: "EcvPage", component: "SelectEcvsb8",image:img,subComponent:"5" },
+    { id: 9, module: "EcvPage", component: "SelectEcvsb9",image:img,subComponent:"5" },
+    { id: 10, module: "EcvPage", component: "SelectEcvsb10",image:img,subComponent:"5" },
+    { id: 11, module: "EcvPage", component: "SelectEcvsb11",image:img,subComponent:"5" },
+    { id: 12, module: "EcvPage", component: "SelectEcvsb12",image:img,subComponent:"5" },
+    { id: 13, module: "EcvPage", component: "SelectEcvsb15",image:img,subComponent:"5" },
+    { id: 14, module: "EcvPage", component: "SelectEcvsb13",image:img,subComponent:"5" },
+    { id: 15, module: "EcvPage", component: "SelectEcvsb14",image:img,subComponent:"5" }
   ];
    
  const filteredRows = rows.filter((row) =>
@@ -27,7 +39,7 @@ function Components({ onAddToCart }) {
         <section>
           <input
         type="text"
-        placeholder="Search by module name..."
+        placeholder="Search ..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         style={{
@@ -37,7 +49,7 @@ function Components({ onAddToCart }) {
           maxWidth: "300px",
         }}
       />
-          <button>Export</button>
+          <button>FetchAll</button>
         </section>
         <table border="1">
           <thead>

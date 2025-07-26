@@ -7,7 +7,6 @@
     height: 80px;
     /* border: 1px solid orange; */
      padding:20px;
-
 }
 #ObjRepo>div ul{
     display: flex;
@@ -17,9 +16,57 @@
    
     font-size: larger;
 }
+#ObjRepo>div ul li{
+    /* color: black;
+     */
+     color: white;
+}
 #ObjRepo>div .link{
     text-decoration: none;
     color: inherit; /* Optional: Keep text color consistent */
-     box-shadow: 1px 1px 10px lightblue;
+     
 
 }
+.link.active {
+  border-bottom: 2px solid rgb(0, 255, 98); /* underline effect */
+
+}
+
+/* Container for nav items */
+.nav-bar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  padding: 16px;
+  margin: 0;
+  gap: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual link style */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #ffea00;
+  border-bottom: 2px solid #ffea00;
+}
+
+/* Active link underline + color */
+.nav-link.active {
+  color: #00ffff;
+  border-bottom: 2px solid #00ffff;
+}
+
+
+

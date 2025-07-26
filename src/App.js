@@ -9,15 +9,15 @@ function App() {
   { objName: 'Carrot', imagePath: d },
   { objName: 'Potato', imagePath: d },
   { objName: 'chilli', imagePath: d},
-  { objName: 'watermelon', imagePath: '/images/watermelon.jpg' },
-  { objName: 'Potato2', imagePath: '/images/potato2.jpg' },
-  { objName: 'Potato3', imagePath: '/images/potato2.jpg' },
-  { objName: 'Potato4', imagePath: '/images/potato2.jpg' },
-  { objName: 'Potato5', imagePath: '/images/potato2.jpg' },
-  { objName: 'Potato6', imagePath: '/images/potato2.jpg' },
+  { objName: 'watermelon', imagePath: d},
+  { objName: 'Potato2', imagePath: d },
+  { objName: 'Potato3', imagePath: d },
+  { objName: 'Potato4', imagePath: d },
+  { objName: 'Potato5', imagePath: d},
+  { objName: 'Potato6', imagePath: d},
 ];
-  return <ImageManager  objects={imageObjects}/>
-  // return <MainRoutes />;
+  // return <ImageManager  objects={imageObjects}/>
+  return <MainRoutes />;
 }
 
 export default App;

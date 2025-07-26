@@ -11,7 +11,6 @@ import APITestRunner from '../pages/APITesting/TestRunner';
 import UIDashboard from '../pages/UITesting/Dashboard';
 import UITestRunner from '../pages/UITesting/TestRunner';
 import NotFound from '../pages/NotFound';
-import TestNgTests from '../pages/UITesting/Application/JIVA/TestNgTests';
 import DefaultDash from '../pages/UITesting/Application/JIVA/Default';
 import ObjRepo from '../pages/UITesting/Application/JIVA/ObjRepo';
 import Modules from '../pages/UITesting/Application/JIVA/Modules';
@@ -19,7 +18,7 @@ import Components from '../pages/UITesting/Application/JIVA/Components';
 import GetSubComponent from '../pages/UITesting/Application/JIVA/GetSubComponent';
 import JavaDashboard from '../pages/UITesting/Application/JIVA/JavaComonents/JavaDashboard/JavaDashboard'
 import Cart from '../pages/UITesting/Application/Components/Cart';
-
+import TestNg from '../pages/UITesting/Application/JIVA/JavaComonents/TestNg';
 import { useState } from 'react';
 
 function MainRoutes() {
@@ -41,10 +40,11 @@ function MainRoutes() {
 
       <Route path="/ui" element={<UIDashboard />}>
         <Route index element={<DefaultDash />} />
-        <Route path="TestNgTests" element={<TestNgTests />} />
+        <Route path="TestNgTests" element={<TestNg />} />
         <Route path="JavaComponents" element={<JavaDashboard />} />
-        <Route path="Cart" element={<Cart  cartItems={cartItems}/>} >
-        
+        <Route path="cart" element={<Cart  cartItems={cartItems}/>} >
+
+          <Route path="NewCart" element={<Modules />} />
         </Route>
         <Route path="ObjRepo" element={<ObjRepo />}>
           <Route path="Modules" element={<Modules />} />

@@ -3,32 +3,35 @@
     padding: 0px;
     box-sizing: border-box;
 }
- #Components table{
+ #testng{
+    margin-top: 20px;
+ }
+ #testng table{
     border:  1px salmon solid;
     width: 70%;
     margin-left: 15%;
     text-align: center;
 }
- #Components table thead{
+ #testng table thead{
     background-color: rgb(8, 76, 203);
     color: white;
 
  }
-  #Components table thead th{
+  #testng table thead th{
     padding: 10px;
   }
-  #Components table tbody tr td{
+  #testng table tbody tr td{
     padding: 8px;
     border: 1px solid;
   }
-  #Components table tbody tr td i{
+  #testng table tbody tr td i{
     cursor: pointer;
   }
-#Components>section{
+#testng>section{
   padding: 0px 30%;
 
 }
-#Components>section>button{
+#testng>section>button{
   background-color: green;
   color: white;
   padding: 10px 20px;

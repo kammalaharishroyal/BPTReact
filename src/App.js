@@ -3,6 +3,7 @@ import './App.css';
 import MainRoutes from './routes/MainRoutes';
 import ImageManager from './pages/UITesting/Application/Components/ImageManager';
 import d from './images/Image1.png';
+import ObjectLocatorManager from './pages/UITesting/Application/JIVA/JavaComonents/ObjectLocatorManager'
 function App() {
    const imageObjects = [
      { objName: 'Tomato', imagePath: d },
@@ -17,7 +18,8 @@ function App() {
   { objName: 'Potato6', imagePath: d},
 ];
   // return <ImageManager  objects={imageObjects}/>
-  return <MainRoutes />;
+  // return <MainRoutes />;
+  return <ObjectLocatorManager />;
 }
 
 export default App;

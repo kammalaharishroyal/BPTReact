@@ -1,0 +1,116 @@
+/* General container styling */
+.locator-manager-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f9fafc, #e8efff);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.section-header i {
+  cursor: pointer;
+  color: #2980b9;
+  transition: transform 0.2s ease;
+}
+
+.section-header i:hover {
+  transform: scale(1.2);
+  color: #1abc9c;
+}
+
+/* Forms */
+.form-container {
+  margin-top: 1rem;
+  background: white;
+  border: 1px solid #dfe6e9;
+  border-radius: 12px;
+  padding: 1rem;
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-container.show {
+  display: block;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3498db;
+}
+
+/* Submit Button */
+.btn-submit {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #2980b9;
+}
+
+/* List Display */
+.existing-locator-list {
+  margin-top: 2rem;
+}
+
+.existing-locator-list h4 {
+  color: #2c3e50;
+}
+
+.locator-card {
+  background: #ffffff;
+  border: 1px solid #dcdde1;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.locator-card strong {
+  color: #2d3436;
+}
